@@ -1,0 +1,40 @@
+import { HomeComponent } from './app/navbar/home/home.component';
+import { SettingsComponent } from './app/navbar/settings/settings.component';
+import { DashboardComponent } from './app/navbar/dashboard/dashboard.component';
+import { Routes } from '@angular/router';
+import { LoginComponent } from './app/navbar/login/login.component';
+import { LoginGuard } from './app/login.guard';
+
+	export const routerConfig: Routes = [
+			{ 
+				path:'home', 
+				component: HomeComponent,
+				canActivate: [LoginGuard],
+			},
+			{
+				path: 'settings',
+				component: SettingsComponent,
+				canActivate: [LoginGuard],
+			},
+			{
+				path: 'dashboard',
+				component: DashboardComponent,
+				canActivate: [LoginGuard],
+			},
+		{
+			path: 'login',
+			component: LoginComponent,
+
+		},
+	{
+		path: '',
+		redirectTo: 'login',
+		pathMatch: 'full',
+	},
+	{
+		path: '**',
+		redirectTo: 'login',
+		pathMatch: 'full',
+	}
+
+];

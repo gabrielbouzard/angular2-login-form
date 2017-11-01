@@ -1,0 +1,16 @@
+<app-navbar showNav="false"></app-navbar>
+<router-outlet></router-outlet>
+
+<div class="login-container">
+	<div class="item">
+		<h1>Login Portal</h1>
+		<form class="pure-form">
+			<fieldset>
+				<input #email type="email" class="pure-input-1-2" id="email" placeholder="Email Address" required><br />
+				<input #password type="password" class="pure-input-1-2" id="password" placeholder="Password" required>
+			</fieldset>
+			<a [routerLink]="['/signup']">Need to register?</a>
+			<app-two-button buttonOneText="Submit" buttonTwoText="Cancel" (buttonOneClicked)="login(email.value, password.value)"></app-two-button>
+		</form>
+	</div>
+</div>

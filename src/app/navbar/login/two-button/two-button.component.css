@@ -1,0 +1,13 @@
+.two-button {
+	margin-top: 20px;
+	padding-left: 10px;
+}
+
+.two-button button {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+p {
+	padding-left: 2%;
+}

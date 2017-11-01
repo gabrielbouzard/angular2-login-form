@@ -1,0 +1,19 @@
+.login-contanier {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 20%;
+}
+
+.item {
+	align-self: center;
+	text-align: center;
+}
+
+input {
+	max-width: 15%;
+}
+
+h1 {
+	color: #606271;
+}
