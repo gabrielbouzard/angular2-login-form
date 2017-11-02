@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 export class LoginService {
 
 	private authenticated = new BehaviorSubject<string>("false");
-	private email = new BehaviorSubject<string>('                 ');
+	private email = new BehaviorSubject<string>('');
 	private password = new BehaviorSubject<string>('');
 
 	currentAuth = this.authenticated.asObservable();
@@ -29,13 +29,14 @@ export class LoginService {
 	}
 
 	public authenticate() {
-		var sentinal = false;
 		for (let user of this.profiles) {
 			// console.log(this.email.getValue() == user.emailAddress.valueOf());
 			// console.log(this.password.getValue() == user.password.valueOf());
 			if ((this.email.getValue() == user.emailAddress.valueOf()) && (this.password.getValue() == user.password.valueOf())) {
 				this.authenticated.next("true");
-				this.router.navigateByUrl('home');
+				return true;
+			} else {
+				return false;
 			}
 		}
 	}

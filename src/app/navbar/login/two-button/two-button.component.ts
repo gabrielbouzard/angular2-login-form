@@ -21,7 +21,8 @@ export class TwoButtonComponent {
 	}
 
 	public onClickButtonTwo() {
-		this.router.navigateByUrl('login');
+		// this.router.navigateByUrl('login');
+		console.log('onClickButtonTwo');
 	}
 
 }

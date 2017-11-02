@@ -18,14 +18,15 @@ export class LoginGuard implements CanActivate, OnInit {
   
 	canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
 		
-		if (this.checkIfLoggedIn() == 'true') {
+		if ((this.checkIfLoggedIn() == 'true') || this.authenticated == 'true') {
 			return true;
 		} else {
-			this.router.navigate(['login'], {
-	        	queryParams: {
-	         		return: state.url
-	        	}
-      		});
+			// this.router.navigate(['login'], {
+	  //       	queryParams: {
+	  //        		return: state.url
+	  //       	}
+   //    		});
+   			return false;
 		}
 	}
 

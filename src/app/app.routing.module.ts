@@ -2,8 +2,16 @@ import { HomeComponent } from './navbar/home/home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginGuard } from './login.guard';
+import { SettingsComponent } from './navbar/settings/settings.component';
+import { DashboardComponent } from './navbar/dashboard/dashboard.component';
+import { LoginComponent } from './navbar/login/login.component';
 
 const appRoutes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent,
+    children: [
       { 
         path:'home', 
         component: HomeComponent,
@@ -18,12 +26,9 @@ const appRoutes: Routes = [
         path: 'dashboard',
         component: DashboardComponent,
         canActivate: [LoginGuard],
-      },
-    {
-      path: 'login',
-      component: LoginComponent,
-
-    },
+      }
+    ],
+  },
   {
     path: '',
     redirectTo: 'login',
@@ -39,10 +44,10 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(appRoutes),
   ],
   exports: [
-  	RoutingModule,
+  	RouterModule,
   ],
   providers: [],
 })

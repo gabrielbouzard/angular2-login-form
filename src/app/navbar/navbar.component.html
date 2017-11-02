@@ -1,10 +1,11 @@
 <!--NAVIGATION MENU-->
 <nav class="main-nav pure-menu pure-menu-horizontal" routerLinkActive="active">
 	<ng-container *ngIf="showNav === 'true'; else blankNav">
-		<a href="navbar/home" class="pure-menu-heading pure-menu-link" routerLink="navbar/home">HOME</a>
+		<a class="pure-menu-heading pure-menu-link" routerLink="../home">HOME</a>
+		<!-- href="navbar/home" -->
 	    <ul class="pure-menu-list">
-	        <li class="pure-menu-item"><a href="navbar/settings" class="pure-menu-link" routerLink="navbar/settings">SETTINGS</a></li>
-	        <li class="pure-menu-item"><a href="navbar/dashboard" class="pure-menu-link" routerLink="navbar/dashboard">DASHBOARD</a></li>
+	        <li class="pure-menu-item"><a class="pure-menu-link" routerLink="../settings">SETTINGS</a></li>
+	        <li class="pure-menu-item"><a class="pure-menu-link" routerLink="../dashboard">DASHBOARD</a></li>
 	    </ul>
 	</ng-container>
 	<ng-template #blankNav>

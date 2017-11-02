@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, RequestOptions, XHRBackend, Http } from "@angular/http";
-import { AppRoutingModule } from './app-routing.module';
+import { RoutingModule } from './app.routing.module';
 
 import { routerConfig } from '../router.config';
 
@@ -34,9 +34,9 @@ import { LoginService } from './login.service';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
+    RoutingModule,
     // RouterModule.forRoot(
-    //   appRoutes,
+    //   RoutingModule,
     //   { enableTracing: true },
     // ),
     HttpModule,
