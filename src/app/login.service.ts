@@ -34,10 +34,12 @@ export class LoginService {
 			// console.log(this.password.getValue() == user.password.valueOf());
 			if ((this.email.getValue() == user.emailAddress.valueOf()) && (this.password.getValue() == user.password.valueOf())) {
 				this.authenticated.next("true");
-				return true;
-			} else {
-				return false;
+				this.router.navigateByUrl('home');
+				// return 'true';
 			}
+			// } else {
+			// 	// return 'false';
+			// }
 		}
 	}
 

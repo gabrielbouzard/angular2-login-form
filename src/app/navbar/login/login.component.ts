@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   password: string;
   authenticated: string;
 
-  constructor(public router: Router, public http: Http, private loginService: LoginService) {}
+  constructor(public router: Router, private loginService: LoginService, public http: Http) {}
   ngOnInit() {
     this.loginService.currentEmail.subscribe(email => this.email = email);
     this.loginService.currentPassword.subscribe(password => this.password = password);

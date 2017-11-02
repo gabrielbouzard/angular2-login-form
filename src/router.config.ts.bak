@@ -6,7 +6,13 @@ import { LoginComponent } from './app/navbar/login/login.component';
 import { LoginGuard } from './app/login.guard';
 
 	export const routerConfig: Routes = [
-			{ 
+	{
+		path: 'login',
+		component: LoginComponent,
+		// children: [
+		// 	{ 
+		},
+		{
 				path:'home', 
 				component: HomeComponent,
 				canActivate: [LoginGuard],
@@ -21,11 +27,7 @@ import { LoginGuard } from './app/login.guard';
 				component: DashboardComponent,
 				canActivate: [LoginGuard],
 			},
-		{
-			path: 'login',
-			component: LoginComponent,
-
-		},
+			// ],
 	{
 		path: '',
 		redirectTo: 'login',

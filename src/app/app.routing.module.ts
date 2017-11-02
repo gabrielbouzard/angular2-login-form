@@ -11,7 +11,8 @@ const appRoutes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    children: [
+    // children: [
+  },
       { 
         path:'home', 
         component: HomeComponent,
@@ -26,8 +27,8 @@ const appRoutes: Routes = [
         path: 'dashboard',
         component: DashboardComponent,
         canActivate: [LoginGuard],
-      }
-    ],
+      
+    // ],
   },
   {
     path: '',
@@ -44,7 +45,10 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(
+      appRoutes, 
+      { enableTracing: true }
+    ),
   ],
   exports: [
   	RouterModule,
@@ -52,4 +56,4 @@ const appRoutes: Routes = [
   providers: [],
 })
 
-export class RoutingModule { }
+export class AppRoutingModule { }

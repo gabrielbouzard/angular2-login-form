@@ -9,7 +9,7 @@ export class LoginGuard implements CanActivate, OnInit {
 
 	authenticated: string;
 
-	constructor(private router: Router, private loginService: LoginService) {}
+	constructor(private loginService: LoginService, private router: Router) {}
 
 	ngOnInit() {
 		this.loginService.currentAuth.subscribe(authenticated => this.authenticated = authenticated);
@@ -18,23 +18,21 @@ export class LoginGuard implements CanActivate, OnInit {
   
 	canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
 		
-		if ((this.checkIfLoggedIn() == 'true') || this.authenticated == 'true') {
+		if (this.checkIfLoggedIn() == 'true') {
+			//  || this.authenticated == 'true') {
 			return true;
 		} else {
-			// this.router.navigate(['login'], {
-	  //       	queryParams: {
-	  //        		return: state.url
-	  //       	}
-   //    		});
-   			return false;
+			return false;
 		}
 	}
 
-	canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-		if (this.checkIfLoggedIn() == 'true') {
-			return true;
-		}
-	}
+	// canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+	// 	if (this.checkIfLoggedIn() == 'true') {
+	// 		return true;
+	// 	} else {
+	// 		return false;
+	// 	}
+	// }
 
 	private checkIfLoggedIn() {
 		// console.log(this.loginService.checkAuth());
