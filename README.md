@@ -1,3 +1,19 @@
+INCLUDE A README FILE WITH FOLLOWING INFORMATION:
+Gabriel Bouzard
+https://github.com/gabrielbouzard/angular2-login-fom
+03 November, 2017
+CSC 436
+HOMEWORK: #7
+COMPLEXITY: 10
+[12] APPROXIMATION OF HOURS INVESTED IN ASSIGNMENT
+EXPECTED GRADE: [A],
+
+INSTRUCTIONS TO RUN APPLICATION:
+1. NPM INSTALL
+2. GULP SURVE
+3. NAVIGATE TO LOCALHOST:3000/
+4. CLICK HERE ... BLAH
+
 # Skeleton
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
