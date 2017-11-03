@@ -4,14 +4,13 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginGuard } from './login.guard';
 import { SettingsComponent } from './navbar/settings/settings.component';
-import { DashboardComponent } from './navbar/dashboard/dashboard.component';
+import { ChatboxComponent } from './navbar/chatbox/chatbox.component';
 import { LoginComponent } from './navbar/login/login.component';
 
 const appRoutes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    // children: [
   },
       { 
         path:'home', 
@@ -24,12 +23,10 @@ const appRoutes: Routes = [
         canActivate: [LoginGuard],
       },
       {
-        path: 'dashboard',
-        component: DashboardComponent,
+        path: 'chatbox',
+        component: ChatboxComponent,
         canActivate: [LoginGuard],
-      
-    // ],
-  },
+      },
   {
     path: '',
     redirectTo: 'login',

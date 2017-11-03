@@ -10,7 +10,7 @@ import { LoginGuard } from './login.guard';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './navbar/login/login.component';
-import { ChatboxComponent } from './chatbox/chatbox.component';
+import { ChatboxComponent } from './navbar/chatbox/chatbox.component';
 import { TwoButtonComponent } from './navbar/login/two-button/two-button.component';
 import { HomeComponent } from './navbar/home/home.component';
 import { SettingsComponent } from './navbar/settings/settings.component';

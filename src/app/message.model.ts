@@ -5,10 +5,9 @@ export class Message {
 
     constructor() { 
         this.messages = [
-        	"image, Bob, Bompart, 'What a time to be alive..'",
-        	"image, Bob, Bompart, 'Worst year since the turn of the century.'",
-        	"image Alice Arms 'Is fault of Obama\'s.'",
-        	"image Bob Bompart 'Go back to your Russian troll farm Alice!'", 
+        	"START",
+        	"SETTINGS",
+        	"COW"
         ]
     }
 

@@ -1,11 +1,4 @@
-.login-contanier {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding-top: 20%;
-}
-
-.item {
+.item {	
 	align-self: center;
 	text-align: center;
 }

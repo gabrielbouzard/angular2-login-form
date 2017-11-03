@@ -1,0 +1,19 @@
+<app-navbar showNav="true"></app-navbar>
+<router-outlet></router-outlet>
+
+<ul>
+	<li *ngFor="let message of conversation">
+		{{ message }}
+	</li>
+</ul>
+{{ conversation }} 
+<div id="item">
+	<form class="pure-form">
+		<fieldset>
+			<input #msg class="pure-input-1-2" id="msg" placeholder="Your message" required><br />
+		</fieldset>
+		<button type="button" class="pure-button pure-button-primary" (click)="onClick(msg.value)">Send</button>
+	</form>
+	<p>Try "START", "COW", or "SETTINGS"</p>
+</div>
+
